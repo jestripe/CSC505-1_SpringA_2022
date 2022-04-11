@@ -1,16 +1,24 @@
-from os import system
+from os import system, name
 import time
 
 class stripe(object):
     def __init__(self, response):
         self.response = response
 
+    # to clear the terminal and make it more readable
+    def clear():
+        # if windows
+        if name == 'nt':
+            _ = system('cls')
+        else: # Mac or linux
+            _ = system('clear')
+
     def communication():
-        system('clear')
+        stripe.clear()
         print('The Communication Phase \n \nIn the Stripe Model the tracking function is moved \nto the communication tier of the diagram to promote more \nfrequent customer interaction and feedback.')
 
     def development():
-        system('clear')
+        stripe.clear()
         print('The Development Phase \n \nThe Modling and Construction phases are combined \nto facilitate faster development life cycles. \n  \nAn explicit design review is included to provide feedback and \ninput from stakeholders.')
 
     def stripe_model():
@@ -18,13 +26,13 @@ class stripe(object):
         input('\nPress enter to continue...')
         stripe.development()
         input('\nPress enter to continue...')
-        system('clear')
+        stripe.clear()
         print('This program will close in five seconds, thank you and good bye!')
         time.sleep(5)
         exit()
 
     def question():
-        system('clear')
+        stripe.clear()
         response = input('Do you want to learn about the Stripe Model Y/N?: ')
 
         if (response == 'Y' or response == 'y'):
